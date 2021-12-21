@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+pyopengl
+pyopengl_accelerate
+openpyxl
+glfw
+pyglm
