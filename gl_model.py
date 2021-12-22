@@ -22,7 +22,7 @@ class Model:
 
 		self.vao = VAO()
 		self.vao.attach_vertex_buffer(position_loc, vertex_positions, 3)
-		self.color_buffer_id = self.vao.attach_vertex_buffer(color_loc, self.vertex_colors[0], 4)
+		self.color_buffer_id = self.vao.attach_vertex_buffer(color_loc, self.vertex_colors[0], 4, gl.GL_DYNAMIC_DRAW)
 
 		self.update_matrix([0.0, 0.0, 0.0])
 
