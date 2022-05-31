@@ -4,4 +4,4 @@ call env/Scripts/activate
 :: upgrade pip
 python -m pip install --upgrade pip
 :: install required packages
-pip install -r requirments.txt
+pip install -r requirements.txt
