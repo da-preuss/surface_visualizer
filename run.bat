@@ -1,2 +1,2 @@
 call env/Scripts/activate
-python src/main.py data.xlsx
+python src/main.py -f data.xlsx

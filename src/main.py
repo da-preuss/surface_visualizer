@@ -1,5 +1,6 @@
 import sys
 import numpy as np
+from argparse import ArgumentParser
 
 from OpenGL import GL as gl
 import glfw
@@ -10,7 +11,13 @@ from gl.gl_shader_program import Shader_Program
 from gl.gl_model import Model
 
 
-def main(filename):
+def main():
+
+	parser = ArgumentParser()
+	parser.add_argument('-f', '--file', help = 'Path to the input file')
+
+	args = parser.parse_args()
+	filename = args.file
 
 	window_size = [1280, 1024]
 	window = Window('Surface Visualizer', window_size)
@@ -46,8 +53,4 @@ def main(filename):
 	glfw.terminate()
 
 if __name__ == '__main__':
-	if len(sys.argv) <= 1:
-		print('Missing filename')
-	else:
-		filename = sys.argv[1]
-		main(filename)
+	main()
